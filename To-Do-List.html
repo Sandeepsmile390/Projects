@@ -25,7 +25,7 @@ body {
     --completed: #b5b5b5;
     --header-bg: #6c63ff;
     --header-text: #fff;
-    --body-bg: #d6c5fa; /* Light purple for default */
+    --body-bg: #d6c5fa;
 }
 
 /* Theme: Blue */
@@ -37,7 +37,7 @@ body {
     --container-bg: #f5faff;
     --header-bg: #2196f3;
     --header-text: #fff;
-    --body-bg: #b3e0ff; /* Light blue shade */
+    --body-bg: #b3e0ff; 
 }
 
 /* Theme: Green */
@@ -49,7 +49,7 @@ body {
     --container-bg: #f6fff7;
     --header-bg: #43a047;
     --header-text: #fff;
-    --body-bg: #c8e6c9; /* Light green shade */
+    --body-bg: #c8e6c9; 
 }
 
 /* Theme: Pink */
@@ -61,7 +61,7 @@ body {
     --container-bg: #fff0f6;
     --header-bg: #e91e63;
     --header-text: #fff;
-    --body-bg: #f8bbd0; /* Light pink shade */
+    --body-bg: #f8bbd0; 
 }
 
 /* Dark mode: use dark background */
@@ -349,17 +349,17 @@ h1 {
     display: inline-block;
     font-size: 13px;
     margin-left: 6px;
-    padding: 2px 8px;          /* Equal left and right padding */
-    border-radius: 999px;      /* Fully curved pill shape */
+    padding: 2px 8px;         
+    border-radius: 999px;    
     background: #ececec;
     color: #555;
     font-weight: 500;
     box-sizing: border-box;
-    white-space: nowrap;       /* Prevent breaking into multiple lines */
+    white-space: nowrap;      
 }
 
 .task-date {
-    background: var(--body-bg, #d6c5fa); /* Same as container background */
+    background: var(--body-bg, #d6c5fa); 
     color: #555;
     font-size: 13px;
     margin-left: 6px;
@@ -396,13 +396,13 @@ h1 {
     padding-left: 2px;
 }
 
-/* Dark mode: task notes margin adjustment */
+
 .dark-mode .task-notes {
     margin-top: 10px;
     display: block;
 }
 
-/* Progress bar container: thinner and subtle */
+
 #progress-bar-container {
     width: 100%;
     background: #ececec;
@@ -413,7 +413,7 @@ h1 {
     overflow: hidden;
 }
 
-/* Progress bar: use button color in light mode */
+/* Progress bar*/
 #progress-bar {
     height: 100%;
     background: var(--primary); /* Same as button color */
@@ -422,7 +422,6 @@ h1 {
     transition: width 0.3s;
 }
 
-/* Progress text: move below the bar for clarity */
 #progress-text {
     position: static;
     display: block;
@@ -445,7 +444,7 @@ h1 {
     margin-left: 0;
 }
 
-/* Add this at the end of your CSS file or near other footer styles */
+
 .footer {
     width: auto;
     min-width: 180px;
@@ -584,7 +583,6 @@ const importTasksInput = document.getElementById('import-tasks');
 // --- Data ---
 let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
 
-// --- Helpers ---
 function saveTasks() {
     localStorage.setItem('tasks', JSON.stringify(tasks));
 }
