@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sandeep Kumar - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #d4f8e8 0%, #b2f7ef 100%);
+            font-family: 'Poppins', Arial, sans-serif;
+            color: #222;
+            margin: 0;
+            padding: 0;
+        }
+        h1, h2, h3 {
+            color: #379683;
+            margin-bottom: 0.5em;
+            letter-spacing: 1px;
+        }
+        h1 {
+            text-align: center;
+            font-size: 2.8em;
+            margin-top: 1.2em;
+            margin-bottom: 0.5em;
+            letter-spacing: 2px;
+            font-weight: 700;
+            /* Enhanced glow effect */
+            text-shadow:
+                0 0 12px #b2f7ef,
+                0 0 24px #a8e6cf,
+                0 2px 16px #b2f7ef;
+        }
+        hr {
+            width: 80px;
+            border: 2px solid #379683;
+            margin: 0 auto 2em auto;
+            border-radius: 2px;
+        }
+        section {
+            background: #fff;
+            margin: 2em auto;
+            padding: 2em 2.5em;
+            border-radius: 16px;
+            box-shadow: 0 4px 24px rgba(56, 142, 60, 0.08);
+            max-width: 700px;
+            opacity: 0;
+            transform: translateY(40px);
+            animation: fadeInUp 1s forwards;
+            animation-delay: 0.3s;
+            text-align: left;
+        }
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        section:last-of-type {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        a {
+            color: #379683;
+            text-decoration: none;
+            border-bottom: 2px solid #b2f7ef;
+            transition: color 0.2s, border-color 0.2s;
+        }
+        a:hover {
+            color: #388e3c;
+            border-color: #379683;
+        }
+        ul {
+            padding-left: 1.2em;
+        }
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .bg-circles {
+            position: fixed;
+            top: 0; left: 0; width: 100vw; height: 100vh;
+            z-index: -1;
+            overflow: hidden;
+        }
+        .bg-circles span {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(56, 142, 60, 0.08);
+            animation: float 8s infinite ease-in-out alternate;
+        }
+        .bg-circles span:nth-child(1) {
+            width: 120px; height: 120px; left: 10%; top: 20%;
+            animation-delay: 0s;
+        }
+        .bg-circles span:nth-child(2) {
+            width: 80px; height: 80px; left: 70%; top: 10%;
+            animation-delay: 2s;
+        }
+        .bg-circles span:nth-child(3) {
+            width: 100px; height: 100px; left: 50%; top: 70%;
+            animation-delay: 4s;
+        }
+        @keyframes float {
+            to { transform: translateY(-30px) scale(1.1); }
+        }
+        @media (max-width: 600px) {
+            section {
+                padding: 1.2em 0.7em;
+                max-width: 98vw;
+            }
+            h1 {
+                font-size: 2em;
+            }
+        }
+        .hire-me-btn {
+            display: inline-block;
+            margin-top: 1.5em;
+            padding: 0.7em 1.5em;
+            background: #379683;
+            color: #fff;
+            border-radius: 30px;
+            font-weight: 600;
+            text-align: center;
+            transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 2px 8px rgba(56, 142, 60, 0.15);
+            border: none;
+            outline: none;
+            cursor: pointer;
+        }
+        .hire-me-btn:hover {
+            background: #388e3c;
+            transform: scale(1.08) translateY(-4px);
+            box-shadow: 0 8px 24px rgba(56, 142, 60, 0.25);
+        }
+        .social-links a {
+            margin: 0 0.5em;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-circles">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <h1>Sandeep Kumar</h1>
+    <hr>
+    <section>
+        <h2>About Me</h2>
+        <p>Hello! I am Sandeep Kumar, a passionate web developer currently pursuing my B.Tech. I have strong interests in building modern and user-friendly web applications.</p>
+        <p>I am currently working as a Web Developer Intern at <strong>VaultofCodes</strong>, where I am honing my skills by building real-world projects. I am also working on the problem statement: <strong>Centralized College Event Hub</strong>, which aims to streamline event management and communication within colleges.</p>
+        <p>I enjoy learning new technologies and creating innovative solutions that make an impact. My focus areas include frontend development, responsive design, and creating engaging user experiences.</p>
+    </section>
+    <section>
+        <h2>Skills</h2>
+        <ul>
+            <li>HTML5, CSS3, JavaScript</li>
+            <li>Responsive Web Design</li>
+            <li>Bootstrap, React (Basics)</li>
+        </ul>
+        <h2>Interests</h2>
+        <ul>
+            <li>Web Development</li>
+            <li>UI/UX Design</li>
+            <li>Learning new technologies</li>
+        </ul>
+    </section>
+    <section>
+        <h2>Projects</h2>
+        <h3>CJN Website</h3>
+        <p>A fully functional website built for the CJN community with a responsive design and interactive features.</p>
+        <a href="https://github.com/Sandeepsmile390/Blue-Planet-Task/tree/main/cjn-website" target="_blank">View Project</a>
+        <h3>E-Commerce Website Landing Page</h3>
+        <p>Designed and developed a modern and attractive landing page for an e-commerce website using HTML, CSS, and JavaScript.</p>
+        <a href="https://github.com/Sandeepsmile390/Blue-Planet-Task/tree/main/ecommerce-website" target="_blank">View Project</a>
+        <h3>To-Do List App</h3>
+        <p>A simple and interactive To-Do List web app to help users manage their daily tasks. Built with HTML, CSS, and JavaScript.</p>
+        <a href="https://github.com/Sandeepsmile390/Projects/blob/main/To-Do-List.html" target="_blank">View Project</a>
+        <h3>Centralized College Event Hub</h3>
+        <p>Currently working on the Centralized College Event Hub project, which aims to provide a single platform for managing and promoting all college events. The goal is to make event discovery, registration, and management seamless for students and organizers.</p>
+        
+    </section>
+    <section>
+        <h2>Contact Information</h2>
+        <p>Email: <a href="mailto:contactsandeep.official@gmail.com">contactsandeep.official@gmail.com</a></p>
+        <div class="social-links">
+            <a href="https://github.com/Sandeepsmile390" target="_blank">GitHub</a> |
+            <a href="https://www.linkedin.com/in/sandeep-kumar-69b0b5364?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">LinkedIn</a>
+        </div>
+        <a href="mailto:contactsandeep.official@gmail.com" class="hire-me-btn">Hire Me</a>
+    </section>
+</body>
+</html>
